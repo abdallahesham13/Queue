@@ -1,0 +1,210 @@
+html[dir="rtl"] {
+  @font-face {
+    font-family: "ExpoArabic";
+    src: url("../fonts/ExpoArabic/ExpoArabic-Medium.ttf");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "ExpoArabic";
+    src: url("../fonts/ExpoArabic/ExpoArabic-Book.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "ExpoArabic";
+    src: url("../fonts/ExpoArabic/ExpoArabic-SemiBold.ttf");
+    font-weight: 900;
+  }
+
+  * {
+    font-family: "ExpoArabic", sans-serif;
+  }
+}
+
+html[dir="ltr"] {
+  @font-face {
+    font-family: "montserrat";
+    src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "montserrat";
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "montserrat";
+    src: url("../fonts/montserrat/Montserrat-ExtraBold.ttf");
+    font-weight: 900;
+  }
+
+  * {
+    font-family: "montserrat", sans-serif;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+
+    @media (max-width: 992px) {
+      right: calc(50% - 60px) !important;
+    }
+  }
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  &::selection {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--light-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+}
+
+.overflowNone {
+  overflow: hidden;
+}
+
+.btn:focus,
+button:focus,
+input:focus,
+.form-control:focus {
+  outline-width: 0px !important;
+  outline-color: transparent !important;
+  box-shadow: 0 0 0 0 rgba($color: #000000, $alpha: 0);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  outline: none !important;
+  border: 0px !important;
+}
+
+.swiper-pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1 !important;
+      width: 14px;
+      height: 14px;
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border: 1px solid rgba(238, 240, 243, 0.8);
+  background-color: rgba(238, 240, 243, 0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+  bottom: 0px !important;
+
+  @media (max-width: 992px) {
+    bottom: 40px !important;
+    top: unset;
+  }
+}
+
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: all 0.3s linear;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 7.5px);
+  left: calc(50% - 7.5px);
+  z-index: 9;
+  background: url("../images/testimonial/arrow.svg") center / contain no-repeat;
+  color: transparent;
+  filter: invert(83%) sepia(5%) saturate(472%) hue-rotate(177deg)
+    brightness(93%) contrast(95%);
+}
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  height: 100%;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  filter: var(--light-filter);
+}
+
+.swiper-rtl .swiper-button-prev,
+.swiper-button-prev {
+  left: 10px;
+  transform: scaleX(-1);
+  right: unset;
+
+  @media (max-width: 992px) {
+    left: calc(50% - 60px) !important;
+  }
+}
+
+
+.swiper-rtl .swiper-button-next,
+.swiper-button-next {
+  right: 10px;
+
+  @media (max-width: 992px) {
+    right: calc(50% - 60px) !important;
+  }
+}
