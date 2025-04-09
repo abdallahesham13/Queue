@@ -830,6 +830,30 @@ html[dir=rtl] .custom-btn img {
   animation: storm 0.4s linear both;
 }
 
+.heading .content {
+  background-color: var(--primary-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 36px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0px auto;
+  gap: 10px;
+}
+.heading .content .status {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+.heading .content img {
+  width: 15px;
+  height: 15px;
+}
+
 .navbar {
   width: 100%;
   padding: 20px 0px;
@@ -2109,6 +2133,9 @@ html[dir=rtl] .partners-section .partner-box .content img {
   text-align: center;
   margin-bottom: 60px;
 }
+.subscribe-now .heading .content {
+  margin-bottom: 10px;
+}
 .subscribe-now .heading h2 {
   font-size: 30px;
   color: var(--dark-color);
@@ -2419,6 +2446,9 @@ html[dir=ltr] .subscribe-now .box .list li::after {
 .question .heading {
   text-align: center;
   margin-bottom: 45px;
+}
+.question .heading .content {
+  margin-bottom: 10px;
 }
 .question .heading h2 {
   font-size: 48px;
